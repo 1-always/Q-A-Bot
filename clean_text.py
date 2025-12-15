@@ -13,6 +13,8 @@ def chunk_text(text, chunk_size=500):
         chunks.append(chunk)
     return chunks
 
+
+
 # Load raw text
 with open("data/raw_text.json", "r", encoding="utf-8") as f:
     raw_data = json.load(f)
@@ -25,3 +27,4 @@ for url, text in raw_data.items():
     all_chunks.extend(chunks)
 
 print(f"Total chunks: {len(all_chunks)}")
+
